@@ -168,7 +168,7 @@
                             </div>
                         </div>
 
-                        <!-- Logo do Repositório GitHub em Destaque -->
+                        <!-- Logo em Destaque do Repositório GitHub -->
                         <div class="lg:col-span-4 flex justify-center">
                             <div class="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full glass-panel border-2 border-blue-500/50 p-6 flex flex-col items-center justify-center text-center shadow-2xl shadow-blue-950/90 group">
                                 <div class="absolute inset-0 bg-blue-600/20 rounded-full blur-2xl -z-10 group-hover:bg-blue-600/30 transition"></div>
@@ -477,7 +477,7 @@
                                     <i data-lucide="chevron-down" id="faq-icon-1" class="w-5 h-5 text-slate-400 transition-transform"></i>
                                 </button>
                                 <div id="faq-answer-1" class="hidden px-5 pb-5 text-sm text-slate-400 leading-relaxed border-t border-blue-900/40 pt-3">
-                                    O trancamento de disciplinas é solicitado diretamente no sistema da DAC dentro do período estabelecido pelo Calendário Acadêmico. Caso necessite de apoio administrativo em situações excepcionais, consulte o CAEM.
+                                    O trancamento de disciplinas é solicitado diretamente no sistema da DAC dentro do período established pelo Calendário Acadêmico. Caso necessite de apoio administrativo em situações excepcionais, consulte o CAEM.
                                 </div>
                             </div>
 
@@ -545,4 +545,531 @@
 
                             <div>
                                 <label class="block text-xs font-bold text-slate-300 uppercase mb-1">Mensagem</label>
-                                <textarea rows="4" required placeholder="Escreva sua mensagem..." class="w-full px-4 py-2.5 rounded-xl bg-black border border-blue-
+                                <textarea rows="4" required placeholder="Escreva sua mensagem..." class="w-full px-4 py-2.5 rounded-xl bg-black border border-blue-900/60 text-white focus:outline-none focus:border-blue-500 text-sm resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition shadow-lg shadow-blue-950/80 border border-blue-400/30 flex items-center justify-center gap-2 text-sm">
+                                <i data-lucide="send" class="w-4 h-4"></i> Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-blue-900/40 py-12 text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3 text-white">
+                        <img src="logo" alt="Logo CAEM Rodapé" class="h-10 w-auto object-contain">
+                        <div>
+                            <span class="font-bold text-lg font-heading text-white block leading-none">CAEM Unicamp</span>
+                            <span class="text-xs text-blue-400">Centro Acadêmico Enedina Marques</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-400 max-w-sm">
+                        Gestão e representação dos estudantes de Engenharia Mecânica da Universidade Estadual de Campinas.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-3 text-sm font-heading">Navegação</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" onclick="switchTab('home')" class="hover:text-blue-400 transition">Eventos & Agenda</a></li>
+                        <li><a href="#" onclick="switchTab('curso')" class="hover:text-blue-400 transition">Estrutura Curricular (FEM)</a></li>
+                        <li><a href="#" onclick="switchTab('facilidades')" class="hover:text-blue-400 transition">Armários & Materiais</a></li>
+                        <li><a href="#" onclick="switchTab('ajuda')" class="hover:text-blue-400 transition">Apoio Estudantil</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-3 text-sm font-heading">Rede Oficial</h4>
+                    <a href="https://www.instagram.com/caem_unicamp/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-xl text-sm transition shadow-md mb-3 border border-blue-400/30">
+                        <i class="fa-brands fa-instagram text-lg"></i> @caem_unicamp
+                    </a>
+                    <p class="text-xs text-slate-500">Siga no Instagram para avisos e atualizações do curso em tempo real.</p>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-blue-900/30 text-xs text-center text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p>&copy; 2026 Centro Acadêmico Enedina Marques (CAEM) - Engenharia Mecânica Unicamp.</p>
+                <div class="flex gap-4 items-center">
+                    <a href="https://www.instagram.com/caem_unicamp/" target="_blank" rel="noopener" class="hover:text-blue-400 transition"><i class="fa-brands fa-instagram text-base"></i></a>
+                    <a href="https://www.fem.unicamp.br/" target="_blank" rel="noopener" class="hover:text-white transition"><i data-lucide="globe" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL DE DETALHES DO EVENTO -->
+    <div id="event-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center z-50 p-4">
+        <div class="glass-panel rounded-2xl max-w-lg w-full p-6 shadow-2xl relative border border-blue-900/60">
+            <button onclick="closeEventModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-1 rounded-lg">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div id="modal-event-content">
+                <!-- Preenchido via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE AÇÃO DAS FACILIDADES -->
+    <div id="action-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center z-50 p-4">
+        <div class="glass-panel rounded-2xl max-w-md w-full p-6 shadow-2xl relative border border-blue-900/60">
+            <button onclick="closeActionModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-1 rounded-lg">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div id="action-modal-body">
+                <!-- Conteúdo dinamico -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CAIXA DE NOTIFICAÇÃO TOAST -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-black text-white px-5 py-3 rounded-xl shadow-2xl hidden items-center gap-3 z-50 transition-all border border-blue-500/50">
+        <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400"></i>
+        <span id="toast-message" class="text-sm font-medium">Ação realizada com sucesso!</span>
+    </div>
+
+    <!-- JAVASCRIPT PRINCIPAL -->
+    <script>
+        // Eventos do CAEM (Engenharia Mecânica Unicamp)
+        const eventsData = [
+            {
+                id: 1,
+                title: "Semana da Engenharia Mecânica (SEMEC 2026)",
+                date: "2026-11-10",
+                displayDate: "10 a 14 de Novembro, 2026",
+                time: "09:00 - 18:00",
+                location: "Auditório da FEM & Bloco UG",
+                category: "academic",
+                categoryName: "SEMEC / Acadêmico",
+                badgeColor: "bg-blue-600/30 text-blue-300 border border-blue-500/40",
+                dotColor: "bg-blue-500",
+                description: "Palestras com especialistas da indústria, feira de recrutamento, minicursos de software CAD e simulação mecânica.",
+                speaker: "Palestrantes convidados & CAEM"
+            },
+            {
+                id: 2,
+                title: "Churrasco de Integração da Mecânica",
+                date: "2026-11-18",
+                displayDate: "18 de Novembro, 2026",
+                time: "17:00 - 23:00",
+                location: "Sede do CAEM / Vivência FEM",
+                category: "social",
+                categoryName: "Festa & Integração",
+                badgeColor: "bg-white/10 text-white border border-white/20",
+                dotColor: "bg-white",
+                description: "Recepção de alunos, churrasco, música e integração entre todas as turmas do curso de Engenharia Mecânica.",
+                speaker: "Diretoria Social do CAEM"
+            },
+            {
+                id: 3,
+                title: "Plantão de Cálculo II & Mecânica dos Sólidos",
+                date: "2026-11-22",
+                displayDate: "22 de Novembro, 2026",
+                time: "14:00 - 17:00",
+                location: "Sala de Estudos CAEM - Bloco UE",
+                category: "study",
+                categoryName: "Plantão de Estudos",
+                badgeColor: "bg-blue-500/20 text-blue-300 border border-blue-400/30",
+                dotColor: "bg-blue-400",
+                description: "Resolução de listas de exercícios de MA211 e EM306 para preparação de provas com apoio de monitores veteranos.",
+                speaker: "Monitores do CAEM"
+            },
+            {
+                id: 4,
+                title: "Workshop: Introdução ao ANSYS & Simulação",
+                date: "2026-11-27",
+                displayDate: "27 de Novembro, 2026",
+                time: "14:00 - 18:00",
+                location: "Laboratório de Computação FEM",
+                category: "academic",
+                categoryName: "Workshop Técnico",
+                badgeColor: "bg-blue-600/30 text-blue-300 border border-blue-500/40",
+                dotColor: "bg-blue-500",
+                description: "Capacitação técnica para simulação de elementos finitos e dinâmica dos fluidos aplicada a projetos do curso.",
+                speaker: "CAEM Unicamp"
+            }
+        ];
+
+        // Disciplinas DAC Unicamp (Engenharia Mecânica)
+        const curriculumData = {
+            1: [
+                { name: "MA111 - Cálculo I", hours: "72h", type: "Núcleo Básico (DAC)" },
+                { name: "F 128 - Física Geral I", hours: "72h", type: "Núcleo Básico (DAC)" },
+                { name: "QG101 - Química Geral", hours: "72h", type: "Núcleo Básico (DAC)" },
+                { name: "MC102 - Programação de Computadores", hours: "72h", type: "Computação" },
+                { name: "EM103 - Introdução à Eng. Mecânica", hours: "36h", type: "Específica FEM" }
+            ],
+            2: [
+                { name: "MA141 - Álgebra Linear", hours: "72h", type: "Núcleo Básico (DAC)" },
+                { name: "MA211 - Cálculo II", hours: "72h", type: "Núcleo Básico (DAC)" },
+                { name: "F 228 - Física Geral II", hours: "72h", type: "Núcleo Básico (DAC)" },
+                { name: "EM200 - Desenho Técnico Mecânico", hours: "72h", type: "Específica FEM" },
+                { name: "EM240 - Estrutura dos Materiais", hours: "72h", type: "Materiais" }
+            ],
+            3: [
+                { name: "MA311 - Cálculo III", hours: "72h", type: "Núcleo Básico (DAC)" },
+                { name: "F 328 - Física Geral III", hours: "72h", type: "Núcleo Básico (DAC)" },
+                { name: "EM306 - Estática & Mecânica Aplicada", hours: "72h", type: "Mecânica Aplicada" },
+                { name: "EM360 - Termodinâmica I", hours: "72h", type: "Termociências" },
+                { name: "EM335 - Tecnologia Mecânica", hours: "54h", type: "Fabricação" }
+            ],
+            4: [
+                { name: "EM404 - Dinâmica dos Corpos Rígidos", hours: "72h", type: "Mecânica Aplicada" },
+                { name: "EM406 - Resistência dos Materiais I", hours: "72h", type: "Sólidos" },
+                { name: "EM460 - Termodinâmica II", hours: "72h", type: "Termociências" },
+                { name: "EM524 - Fenômenos de Transporte", hours: "72h", type: "Fluidos" }
+            ],
+            5: [
+                { name: "EM504 - Mecanismos e Dinâmica de Máquinas", hours: "72h", type: "Mecânica Aplicada" },
+                { name: "EM506 - Resistência dos Materiais II", hours: "72h", type: "Sólidos" },
+                { name: "EM535 - Usinagem dos Materiais", hours: "72h", type: "Fabricação" },
+                { name: "EM561 - Mecânica dos Fluidos II", hours: "72h", type: "Fluidos" }
+            ],
+            6: [
+                { name: "EM607 - Vibrações de Sistemas Mecânicos", hours: "72h", type: "Mecânica Aplicada" },
+                { name: "EM608 - Elementos de Máquinas", hours: "72h", type: "Projeto Mecânico" },
+                { name: "EM570 - Transferência de Calor I", hours: "72h", type: "Termociências" },
+                { name: "EM703 - Instrumentação Mecânica", hours: "54h", type: "Sistemas" }
+            ],
+            7: [
+                { name: "EM707 - Controle de Sistemas Mecânicos", hours: "72h", type: "Automação" },
+                { name: "EM730 - Conformação Mecânica", hours: "72h", type: "Fabricação" },
+                { name: "EM783 - Laboratório de Calor e Fluidos", hours: "36h", type: "Laboratório" },
+                { name: "EM790 - Eng. Assistida por Computador", hours: "54h", type: "Projetos" }
+            ],
+            8: [
+                { name: "EM105 - Introdução ao Trabalho de Graduação", hours: "36h", type: "TCC DAC" },
+                { name: "Optativas Eletivas do Curso", hours: "144h", type: "Especialização" }
+            ],
+            9: [
+                { name: "EM106 - Trabalho de Graduação I", hours: "90h", type: "TCC DAC" },
+                { name: "EM916 - Estágio Supervisionado", hours: "180h", type: "Estágio Prático" }
+            ],
+            10: [
+                { name: "EM919 - Defesa de Trabalho de Graduação II", hours: "120h", type: "TCC DAC" },
+                { name: "Atividades Complementares (ACC)", hours: "100h", type: "Complementar" }
+            ]
+        };
+
+        let activeFilter = 'all';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            renderEvents();
+            renderCalendarGrid();
+            renderSemesterSelector();
+            renderSemesterContent(1);
+        });
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            
+            const selectedTab = document.getElementById(`tab-${tabId}`);
+            if (selectedTab) {
+                selectedTab.classList.remove('hidden');
+            }
+
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('bg-blue-900/40', 'text-white');
+            });
+            
+            const activeNavBtn = document.getElementById(`nav-${tabId}`);
+            if (activeNavBtn) {
+                activeNavBtn.classList.add('bg-blue-900/40', 'text-white');
+            }
+
+            document.getElementById('mobile-menu').classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        function scrollToCalendar() {
+            document.getElementById('calendar-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function renderEvents() {
+            const container = document.getElementById('events-container');
+            const filtered = activeFilter === 'all' 
+                ? eventsData 
+                : eventsData.filter(e => e.category === activeFilter);
+
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="glass-panel p-8 rounded-2xl text-center text-slate-400">
+                        <i data-lucide="calendar-x" class="w-10 h-10 mx-auto mb-2 text-blue-500"></i>
+                        Nenhum evento nesta categoria no momento.
+                    </div>
+                `;
+                lucide.createIcons();
+                return;
+            }
+
+            container.innerHTML = filtered.map(event => `
+                <div class="glass-panel p-6 rounded-2xl border border-blue-900/40 hover:border-blue-500 transition flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 group">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-full ${event.badgeColor}">
+                                ${event.categoryName}
+                            </span>
+                            <span class="text-xs text-slate-400 flex items-center gap-1">
+                                <i data-lucide="clock" class="w-3.5 h-3.5"></i> ${event.time}
+                            </span>
+                        </div>
+                        <h4 class="font-bold text-lg text-white group-hover:text-blue-400 transition font-heading">${event.title}</h4>
+                        <div class="flex flex-wrap gap-4 text-xs text-slate-400">
+                            <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3.5 h-3.5 text-blue-500"></i> ${event.displayDate}</span>
+                            <span class="flex items-center gap-1"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-blue-500"></i> ${event.location}</span>
+                        </div>
+                    </div>
+                    <button onclick="openEventModal(${event.id})" class="shrink-0 bg-blue-950 hover:bg-blue-600 text-slate-200 hover:text-white text-xs font-bold px-4 py-2.5 rounded-xl transition border border-blue-900/60 flex items-center gap-1">
+                        Detalhes <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+            `).join('');
+
+            lucide.createIcons();
+        }
+
+        function filterEvents(category) {
+            activeFilter = category;
+            
+            document.querySelectorAll('.event-filter-btn').forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'text-white');
+                btn.classList.add('bg-blue-950/60', 'text-slate-300');
+            });
+
+            const activeBtn = document.getElementById(`btn-filter-${category}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-blue-950/60', 'text-slate-300');
+                activeBtn.classList.add('bg-blue-600', 'text-white');
+            }
+
+            renderEvents();
+        }
+
+        function renderCalendarGrid() {
+            const grid = document.getElementById('calendar-days-grid');
+            let html = '';
+
+            for(let day = 1; day <= 30; day++) {
+                const event = eventsData.find(e => parseInt(e.date.split('-')[2]) === day);
+                const isToday = day === 10;
+
+                html += `
+                    <div onclick="${event ? `openEventModal(${event.id})` : ''}" 
+                         class="p-2 min-h-[40px] rounded-xl flex flex-col items-center justify-center relative cursor-pointer hover:bg-blue-900/30 transition ${isToday ? 'bg-blue-600/30 text-blue-300 font-bold border border-blue-500/50' : 'text-slate-300'}">
+                        <span>${day}</span>
+                        ${event ? `<span class="w-2 h-2 rounded-full ${event.dotColor} mt-0.5"></span>` : ''}
+                    </div>
+                `;
+            }
+            grid.innerHTML = html;
+        }
+
+        function openEventModal(eventId) {
+            const event = eventsData.find(e => e.id === eventId);
+            if (!event) return;
+
+            const content = document.getElementById('modal-event-content');
+            content.innerHTML = `
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full ${event.badgeColor} uppercase">
+                    ${event.categoryName}
+                </span>
+                <h3 class="text-2xl font-bold font-heading text-white mt-3 mb-2">${event.title}</h3>
+                <p class="text-slate-300 text-sm mb-6">${event.description}</p>
+
+                <div class="space-y-3 bg-black/80 p-4 rounded-xl border border-blue-900/60 text-sm mb-6">
+                    <div class="flex items-center gap-3 text-slate-300">
+                        <i data-lucide="calendar" class="w-5 h-5 text-blue-500"></i>
+                        <span><strong>Data:</strong> ${event.displayDate}</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-slate-300">
+                        <i data-lucide="clock" class="w-5 h-5 text-blue-500"></i>
+                        <span><strong>Horário:</strong> ${event.time}</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-slate-300">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-blue-500"></i>
+                        <span><strong>Local:</strong> ${event.location}</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-slate-300">
+                        <i data-lucide="user" class="w-5 h-5 text-blue-500"></i>
+                        <span><strong>Organização:</strong> ${event.speaker}</span>
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <button onclick="confirmInscription('${event.title}')" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-xl transition text-sm shadow-lg shadow-blue-950/80 border border-blue-400/30">
+                        Confirmar Presença
+                    </button>
+                    <button onclick="closeEventModal()" class="bg-blue-950 hover:bg-blue-900 text-slate-300 font-semibold px-4 py-2.5 rounded-xl transition text-sm border border-blue-900">
+                        Fechar
+                    </button>
+                </div>
+            `;
+
+            lucide.createIcons();
+            document.getElementById('event-modal').classList.remove('hidden');
+            document.getElementById('event-modal').classList.add('flex');
+        }
+
+        function closeEventModal() {
+            document.getElementById('event-modal').classList.add('hidden');
+            document.getElementById('event-modal').classList.remove('flex');
+        }
+
+        function confirmInscription(title) {
+            closeEventModal();
+            showNotice(`Presença confirmada para: ${title}`);
+        }
+
+        function renderSemesterSelector() {
+            const container = document.getElementById('semester-selector');
+            let html = '';
+            for (let i = 1; i <= 10; i++) {
+                html += `
+                    <button onclick="selectSemester(${i})" id="sem-btn-${i}" 
+                            class="px-3.5 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition ${i === 1 ? 'bg-blue-600 text-white' : 'bg-blue-950/60 text-slate-400 hover:bg-blue-900/60 border border-blue-900/40'}">
+                        ${i}º Semestre
+                    </button>
+                `;
+            }
+            container.innerHTML = html;
+        }
+
+        function selectSemester(sem) {
+            for (let i = 1; i <= 10; i++) {
+                const btn = document.getElementById(`sem-btn-${i}`);
+                if (i === sem) {
+                    btn.className = "px-3.5 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition bg-blue-600 text-white";
+                } else {
+                    btn.className = "px-3.5 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition bg-blue-950/60 text-slate-400 hover:bg-blue-900/60 border border-blue-900/40";
+                }
+            }
+            renderSemesterContent(sem);
+        }
+
+        function renderSemesterContent(sem) {
+            const container = document.getElementById('semester-content');
+            const list = curriculumData[sem] || [];
+
+            container.innerHTML = `
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">${sem}º Semestre - Engenharia Mecânica Unicamp</span>
+                        <span class="text-xs font-semibold bg-blue-600/20 border border-blue-500/30 text-blue-300 px-2.5 py-1 rounded-full">Catálogo DAC</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        ${list.map(subject => `
+                            <div class="p-4 rounded-xl border border-blue-900/40 bg-black/60 flex justify-between items-center hover:border-blue-500/50 transition">
+                                <div>
+                                    <div class="font-bold text-white text-sm">${subject.name}</div>
+                                    <div class="text-xs text-slate-400 mt-0.5">${subject.type}</div>
+                                </div>
+                                <span class="text-xs bg-blue-950 text-blue-300 px-2.5 py-1 rounded-lg border border-blue-900 font-mono">${subject.hours}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function toggleFaq(id) {
+            const answer = document.getElementById(`faq-answer-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                answer.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        function openModal(type) {
+            const modalBody = document.getElementById('action-modal-body');
+            let content = '';
+
+            if (type === 'armarios') {
+                content = `
+                    <h3 class="text-xl font-bold font-heading text-white mb-2">Solicitar Armário</h3>
+                    <p class="text-slate-300 text-sm mb-4">Solicitação de alocação de armário nos blocos da Engenharia Mecânica.</p>
+                    <form onsubmit="handleModalSubmit(event, 'Solicitação registrada! Aguarde o contato da diretoria.')" class="space-y-3">
+                        <input type="text" placeholder="Nome Completo" required class="w-full px-3 py-2 bg-black border border-blue-900/60 rounded-xl text-white text-sm focus:border-blue-500">
+                        <input type="text" placeholder="RA Unicamp" required class="w-full px-3 py-2 bg-black border border-blue-900/60 rounded-xl text-white text-sm focus:border-blue-500">
+                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-2.5 rounded-xl text-sm hover:bg-blue-700 transition shadow-lg shadow-blue-950">Solicitar Armário</button>
+                    </form>
+                `;
+            } else if (type === 'emprestimo') {
+                content = `
+                    <h3 class="text-xl font-bold font-heading text-white mb-2">Empréstimo de Materiais</h3>
+                    <p class="text-slate-300 text-sm mb-4">Empréstimo temporário de ferramentas e calculadoras para os estudantes.</p>
+                    <div class="space-y-2 text-sm text-slate-300 bg-black p-3 rounded-xl mb-4 border border-blue-900/60">
+                        <p>✔ Calculadoras Científicas</p>
+                        <p>✔ Paquímetros e Escalas</p>
+                        <p>✔ Livros Didáticos de Engenharia</p>
+                    </div>
+                    <button onclick="closeActionModal(); showNotice('Retire presencialmente na sede do CAEM!')" class="w-full bg-blue-600 text-white font-bold py-2.5 rounded-xl text-sm">Entendido</button>
+                `;
+            } else if (type === 'carteirinha') {
+                content = `
+                    <h3 class="text-xl font-bold font-heading text-white mb-2">Carteirinha CAEM</h3>
+                    <p class="text-slate-300 text-sm mb-4">Retire sua carteirinha presencialmente na sede do CAEM ou nos contate no Instagram @caem_unicamp.</p>
+                    <a href="https://www.instagram.com/caem_unicamp/" target="_blank" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-xl text-sm flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-instagram"></i> Ir para o Instagram
+                    </a>
+                `;
+            }
+
+            modalBody.innerHTML = content;
+            document.getElementById('action-modal').classList.remove('hidden');
+            document.getElementById('action-modal').classList.add('flex');
+        }
+
+        function closeActionModal() {
+            document.getElementById('action-modal').classList.add('hidden');
+            document.getElementById('action-modal').classList.remove('flex');
+        }
+
+        function handleModalSubmit(event, msg) {
+            event.preventDefault();
+            closeActionModal();
+            showNotice(msg);
+        }
+
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            showNotice("Sua mensagem foi enviada à diretoria do CAEM!");
+            event.target.reset();
+        }
+
+        function showNotice(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            toastMsg.innerText = msg;
+            
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+
+            setTimeout(() => {
+                toast.classList.add('hidden');
+                toast.classList.remove('flex');
+            }, 3500);
+        }
+
+        function changeMonth(delta) {
+            showNotice("Alternando meses do calendário...");
+        }
+    </script>
+</body>
+</html>
