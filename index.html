@@ -343,19 +343,6 @@
                         </a>
                     </div>
 
-                    <!-- Armários -->
-                    <div class="glass-panel rounded-2xl p-6 border border-blue-900/40 hover:border-blue-500 transition">
-                        <div class="w-12 h-12 bg-blue-600/20 text-blue-400 rounded-xl flex items-center justify-center mb-5 border border-blue-500/30">
-                            <i data-lucide="key" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-bold font-heading text-white mb-2">Reserva de Armários</h3>
-                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-                            Armários para guardar seus materiais, mochilas e equipamentos nos blocos da Engenharia Mecânica.
-                        </p>
-                        <button onclick="openModal('armarios')" class="w-full bg-blue-950 hover:bg-blue-600 hover:text-white text-slate-200 border border-blue-900/60 font-bold py-2.5 rounded-xl transition text-sm flex items-center justify-center gap-2">
-                            <i data-lucide="lock" class="w-4 h-4"></i> Requerer Armário
-                        </button>
-                    </div>
 
                     <!-- Empréstimo de Ferramentas / Calculadoras -->
                     <div class="glass-panel rounded-2xl p-6 border border-blue-900/40 hover:border-blue-500 transition">
@@ -378,43 +365,11 @@
                         </div>
                         <h3 class="text-xl font-bold font-heading text-white mb-2">Sede & Vivência CAEM</h3>
                         <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-                            Nossa sede conta com sofás, café, geladeira, micro-ondas, mesa de jogos e espaço para descansar nas janelas de aula.
                         </p>
                         <div class="flex items-center gap-2 text-xs font-semibold text-blue-300 bg-blue-600/20 border border-blue-500/30 px-3 py-1.5 rounded-lg w-fit">
-                            <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span> Aberto de Segunda a Sexta
+                            <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span> Aberto de Segunda a Sexta das 08h às 20h30
                         </div>
                     </div>
-
-                    <!-- Carteirinha do Aluno -->
-                    <div class="glass-panel rounded-2xl p-6 border border-blue-900/40 hover:border-blue-500 transition">
-                        <div class="w-12 h-12 bg-blue-600/20 text-blue-400 rounded-xl flex items-center justify-center mb-5 border border-blue-500/30">
-                            <i data-lucide="id-card" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-bold font-heading text-white mb-2">Carteirinha do CAEM</h3>
-                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-                            Acesso a descontos em eventos, produtos oficiais da Mecânica Unicamp e parcerias em Barão Geraldo.
-                        </p>
-                        <button onclick="openModal('carteirinha')" class="w-full bg-blue-950 hover:bg-blue-600 hover:text-white text-slate-200 border border-blue-900/60 font-bold py-2.5 rounded-xl transition text-sm flex items-center justify-center gap-2">
-                            <i data-lucide="credit-card" class="w-4 h-4"></i> Solicitada na Sede
-                        </button>
-                    </div>
-
-                    <!-- Produtos da Mecânica -->
-                    <div class="glass-panel rounded-2xl p-6 border border-blue-900/40 hover:border-blue-500 transition">
-                        <div class="w-12 h-12 bg-blue-600/20 text-blue-400 rounded-xl flex items-center justify-center mb-5 border border-blue-500/30">
-                            <i data-lucide="shopping-bag" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-bold font-heading text-white mb-2">Lojinha & Vestuário</h3>
-                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-                            Moletons do curso, tirantes, canecas, adesivos e camisetas com a identidade visual da Engenharia Mecânica.
-                        </p>
-                        <a href="https://www.instagram.com/caem_unicamp/" target="_blank" rel="noopener" class="w-full bg-blue-950 hover:bg-blue-600 hover:text-white text-slate-200 border border-blue-900/60 font-bold py-2.5 rounded-xl transition text-sm flex items-center justify-center gap-2">
-                            <i class="fa-brands fa-instagram"></i> Ver Catálogo no Insta
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- ================= ABA 4: AJUDA PARA ALUNOS ================= -->
         <section id="tab-ajuda" class="tab-content hidden">
@@ -432,92 +387,13 @@
                         <h3 class="text-2xl font-bold font-heading text-white">SAPPE & SAE Unicamp</h3>
                         <p class="text-slate-300 text-sm max-w-2xl">A Unicamp oferece atendimento psicológico gratuito (SAPPE), auxílios de permanência estudantil (SAE) e assistência à saúde no CECOM.</p>
                     </div>
-                    <a href="https://www.saesappe.unicamp.br/" target="_blank" rel="noopener" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl transition shrink-0 flex items-center gap-2 text-sm shadow-lg shadow-blue-950/80 border border-blue-400/30">
+                    <a href="https://deape.unicamp.br/permanencia/saude-mental/sobre/" target="_blank" rel="noopener" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl transition shrink-0 flex items-center gap-2 text-sm shadow-lg shadow-blue-950/80 border border-blue-400/30">
                         <i data-lucide="heart-handshake" class="w-4 h-4"></i> Serviços da Unicamp
                     </a>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                    <!-- FAQ Expansível -->
-                    <div class="lg:col-span-7">
-                        <h3 class="text-2xl font-bold font-heading text-white mb-6 flex items-center gap-2">
-                            <i data-lucide="help-circle" class="w-6 h-6 text-blue-500"></i> Perguntas Frequentes (Bixos e Veteranos)
-                        </h3>
-
-                        <div class="space-y-4" id="faq-accordion">
-                            <div class="glass-panel rounded-xl border border-blue-900/40 overflow-hidden">
-                                <button onclick="toggleFaq(1)" class="w-full p-5 text-left font-bold text-slate-200 flex justify-between items-center hover:bg-blue-950/40 transition">
-                                    <span>Como funciona o trancamento de matérias pelo portal da DAC?</span>
-                                    <i data-lucide="chevron-down" id="faq-icon-1" class="w-5 h-5 text-slate-400 transition-transform"></i>
-                                </button>
-                                <div id="faq-answer-1" class="hidden px-5 pb-5 text-sm text-slate-400 leading-relaxed border-t border-blue-900/40 pt-3">
-                                    O trancamento de disciplinas é solicitado diretamente no sistema da DAC dentro do período estabelecido pelo Calendário Acadêmico.
-                                </div>
-                            </div>
-
-                            <div class="glass-panel rounded-xl border border-blue-900/40 overflow-hidden">
-                                <button onclick="toggleFaq(2)" class="w-full p-5 text-left font-bold text-slate-200 flex justify-between items-center hover:bg-blue-950/40 transition">
-                                    <span>O que é Enedina Marques e por que este é o nome do CAEM?</span>
-                                    <i data-lucide="chevron-down" id="faq-icon-2" class="w-5 h-5 text-slate-400 transition-transform"></i>
-                                </button>
-                                <div id="faq-answer-2" class="hidden px-5 pb-5 text-sm text-slate-400 leading-relaxed border-t border-blue-900/40 pt-3">
-                                    Enedina Marques foi a primeira mulher negra a se formar em engenharia no Brasil (1945, UFPR). O CAEM homenageia sua trajetória de liderança e determinação.
-                                </div>
-                            </div>
-
-                            <div class="glass-panel rounded-xl border border-blue-900/40 overflow-hidden">
-                                <button onclick="toggleFaq(3)" class="w-full p-5 text-left font-bold text-slate-200 flex justify-between items-center hover:bg-blue-950/40 transition">
-                                    <span>Onde encontro as informações oficiais de horários e salas?</span>
-                                    <i data-lucide="chevron-down" id="faq-icon-3" class="w-5 h-5 text-slate-400 transition-transform"></i>
-                                </button>
-                                <div id="faq-answer-3" class="hidden px-5 pb-5 text-sm text-slate-400 leading-relaxed border-t border-blue-900/40 pt-3">
-                                    Você pode consultar o Caderno de Horários no portal da DAC Unicamp ou verificar as turmas abertas diretamente no site da FEM.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Formulário de Contato Direto -->
-                    <div class="lg:col-span-5 glass-panel p-8 rounded-2xl border border-blue-900/40">
-                        <h3 class="text-xl font-bold font-heading text-white mb-2">Fale com o CAEM</h3>
-                        <p class="text-slate-400 text-sm mb-6">Envie sugestões, dúvidas ou mensagens à diretoria.</p>
-
-                        <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
-                            <div>
-                                <label class="block text-xs font-bold text-slate-300 uppercase mb-1">Nome Completo</label>
-                                <input type="text" required placeholder="Seu nome" class="w-full px-4 py-2.5 rounded-xl bg-black border border-blue-900/60 text-white focus:outline-none focus:border-blue-500 text-sm">
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-bold text-slate-300 uppercase mb-1">E-mail (Unicamp)</label>
-                                <input type="email" required placeholder="ra******@dac.unicamp.br" class="w-full px-4 py-2.5 rounded-xl bg-black border border-blue-900/60 text-white focus:outline-none focus:border-blue-500 text-sm">
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-bold text-slate-300 uppercase mb-1">Assunto</label>
-                                <select class="w-full px-4 py-2.5 rounded-xl bg-black border border-blue-900/60 text-white focus:outline-none focus:border-blue-500 text-sm">
-                                    <option>Dúvida de Disciplina / Curso</option>
-                                    <option>Reserva de Armário ou Espaço</option>
-                                    <option>Sugestão para Eventos</option>
-                                    <option>Ouvidoria / Mensagem à Diretoria</option>
-                                    <option>Outro</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-bold text-slate-300 uppercase mb-1">Mensagem</label>
-                                <textarea rows="4" required placeholder="Escreva sua mensagem..." class="w-full px-4 py-2.5 rounded-xl bg-black border border-blue-900/60 text-white focus:outline-none focus:border-blue-500 text-sm resize-none"></textarea>
-                            </div>
-
-                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition shadow-lg shadow-blue-950/80 border border-blue-400/30 flex items-center justify-center gap-2 text-sm">
-                                <i data-lucide="send" class="w-4 h-4"></i> Enviar Mensagem
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+                 
     </main>
 
     <!-- Footer -->
@@ -581,11 +457,13 @@
     <script>
         const curriculumData = {
             1: [
-                { name: "MA111 - Cálculo I", hours: "72h", type: "Núcleo Básico (DAC)" },
-                { name: "F 128 - Física Geral I", hours: "72h", type: "Núcleo Básico (DAC)" },
-                { name: "QG101 - Química Geral", hours: "72h", type: "Núcleo Básico (DAC)" },
-                { name: "MC102 - Programação de Computadores", hours: "72h", type: "Computação" },
-                { name: "EM103 - Introdução à Eng. Mecânica", hours: "36h", type: "Específica FEM" }
+                { name: "MA111 - Cálculo I", hours: "90h"},
+                { name: "F 128 - Física Geral I", hours: "60h"},
+                { name: "QG101 - Química Geral", hours: "60h"},
+                { name: "MA141 - Geometria Analítica e Vetores", hours: "60h" },
+                { name: "EM110 - Introdução à Engenharia Mecânica", hours: "30h" }
+                { name: "EM120 - Introdução à Engenharia Mecânica", hours: "30h" }
+                { name: "EM102 - Desenho Técnico", hours: "60h" }
             ],
             2: [
                 { name: "MA141 - Álgebra Linear", hours: "72h", type: "Núcleo Básico (DAC)" },
